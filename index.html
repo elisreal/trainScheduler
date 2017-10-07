@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Train Schedule</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Libre+Franklin" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <!-- main banner start -->
+      <div class="col s12 m2">
+        <div class="center-align">
+          <img class="logo" src="assets/images/logo.png" alt="Train Logo"></div>
+        <h1 id="banner" class="center-align">GET ON THE TRAIN</h1>
+        <p class="subhead center-align">Fill out the form and watch for your train.</p>
+
+      </div>
+      <!-- table Start -->
+      <div class="mainBody">
+      <table id="schedule" class="striped">
+        <thead>
+          <tr>
+              <th data-field="train">Train Name</th>
+              <th data-field="name">Destination</th>
+              <th data-field="frequency">Frequency (mins)</th>
+              <th data-field="arrival">Next Arrival</th>
+              <th data-field="away">Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Cool Train</td>
+            <td>Cool World</td>
+            <td>15</td>
+            <td>13:40</td>
+            <td>15</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <!--Form Begin -->
+      <div class="row">
+    <form id="mainForm" class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="trainName">Train Name</label>
+          <input placeholder="i.e. Train Name" id="train_name" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="destination">Destination</label>
+          <input placeholder="i.e. 	Your Destination" id="destination" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="firstTrain">First Train Time</label>
+          <input placeholder="(HH:MM) Miltary Time" id="firstTrain" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="frequency">Frequency</label>
+          <input placeholder="Frequency (minutes)" id="frequency" type="text" class="validate">
+        </div>
+      </div>
+      <button id="submitBtn" class="btn waves-effect waves-light" type="submit">Submit
+        <i class="material-icons right"></i>
+      </button>
+    </form>
+  </div>
+</div>
+</div> <!-- end main container -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  </body>
+</html>
