@@ -73,3 +73,10 @@ table {
 form {
 	font-family: 'Libre Franklin', sans-serif;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+.container {
+        width: 100%;
+    }
+}
