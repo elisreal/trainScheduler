@@ -1,3 +1,11 @@
+// 1. load firebase database
+// 2. the table will load old data from the database
+// 3. fill out the form
+// 4. click the submit button
+// 5. on.click the data in the form will push to the firebase
+// 6. The firebase data will be pushed to the DOM
+
+
 $(document).ready(function() {
 //connect to my firebase
 var config = {
@@ -21,11 +29,13 @@ var config = {
     console.log("Push it real good");
     event.preventDefault();
 
+  //collect info from form
     var trainName = $('#train_name').val();
     var destination = $('#destination').val();
     var firstTrain = $('#firstTrain').val();
     var frequency = $('#frequency').val();
 
+  //collate info into new object in firebase
     var newTrain = {
       train: trainName,
       destination: destination,
@@ -33,6 +43,7 @@ var config = {
       firstTrain: firstTrain
     }
 
+  //push to database
     database.ref().push(newTrain);
 
     console.log(newTrain.train);
